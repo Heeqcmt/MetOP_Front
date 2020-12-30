@@ -1,14 +1,11 @@
-import { ReactComponent } from '*.svg';
-import React from 'react';
+import React from 'react-dom';
 
+export default function Header() {
+    
+        return (
+            <header>
+                This is the header
+            </header>
+        );
 
-
-
-export default function Header()
-{
-    return (    <div>
-        this is the header
-        </div>
-    )
-
-}
+        }
