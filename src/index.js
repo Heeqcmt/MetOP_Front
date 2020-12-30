@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';
-import './index.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App()
 {
@@ -14,11 +14,11 @@ function App()
         <Footer />
         </>
     );
-}
+};
 
 ReactDOM.render(
 
-    <App></App>,
+    <App />,
     document.getElementById('root')
 )
 

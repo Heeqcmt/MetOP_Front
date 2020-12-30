@@ -1,11 +1,11 @@
-import React from 'react-dom';
-
-export default function Main() {
+import React from "react";
+import Selector from "./mainComponent/selector";
+export default class Main extends React.Component{
     
-        return (
-          <div>
-              this is the main
-          </div>
-        );
-
+        render()
+        {
+            return(
+                < Selector />
+            )
         }
+    }
