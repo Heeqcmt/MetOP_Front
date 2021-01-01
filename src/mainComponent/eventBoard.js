@@ -13,7 +13,7 @@ export default class EventBoard extends React.Component {
             
                 <Container>
                     <Row>
-                       <CardGroup>
+                       
                         {
                             this.props.eventArray.map(
                                 event => (
@@ -34,7 +34,7 @@ export default class EventBoard extends React.Component {
                                 )
                             )
                         }
-                        </CardGroup>
+                        
                     </Row>
                 </Container>
            
