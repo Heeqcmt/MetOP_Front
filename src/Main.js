@@ -4,134 +4,138 @@ import EventBoard from "./mainComponent/eventBoard";
 //sample data
 const testEventArray = [
     {
-        title: "Liberal party event 1",
-        id: 0,
-        location: "online",
-        province: "Ontario",
-        party: "Liberal",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
+        province:"Ontario",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"Liberal",
+            title: "some title"
+        }
     },
     {
-        title: "Conservative party event 1",
-        id: 1,
-        location: "online",
-        province: "Ontario",
-        party: "Conservative",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
-
+        province:"Ontario",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"Conservative",
+            title: "some title"
+        }
     },
     {
-        title: "NDP event 1",
-        id: 2,
-        location: "online",
-        province: "Ontario",
-        party: "NDP",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
-
+        province:"Ontario",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"NDP",
+            title: "some title"
+        }
+    },{
+        province:"Ontario",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"Liberal",
+            title: "some title"
+        }
     },
     {
-        title: "Liberal party event 1",
-        id: 0,
-        location: "online",
-        province: "Ontario",
-        party: "Liberal",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
+        province:"Ontario",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"Conservative",
+            title: "some title"
+        }
     },
     {
-        title: "Conservative party event 1",
-        id: 1,
-        location: "online",
-        province: "Ontario",
-        party: "Conservative",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
-
+        province:"Ontario",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"NDP",
+            title: "some title"
+        }
     },
     {
-        title: "NDP event 1",
-        id: 2,
-        location: "online",
-        province: "Ontario",
-        party: "NDP",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
-
+        province:"Ontario",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"Liberal",
+            title: "some title"
+        }
     },
     {
-        title: "Liberal party event 1",
-        id: 0,
-        location: "online",
-        province: "Ontario",
-        party: "Liberal",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
+        province:"Ontario",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"Conservative",
+            title: "some title"
+        }
     },
     {
-        title: "Conservative party event 1",
-        id: 1,
-        location: "online",
-        province: "Ontario",
-        party: "Conservative",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
-
+        province:"Ontario",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"NDP",
+            title: "some title"
+        }
     },
     {
-        title: "NDP event 1",
-        id: 2,
-        location: "online",
-        province: "Ontario",
-        party: "NDP",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
-
+        province:"British Columbia",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"Liberal",
+            title: "some title"
+        }
     },
     {
-        title: "Liberal party event 1",
-        id: 0,
-        location: "online",
-        province: "British Columbia",
-        party: "Liberal",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
+        province:"British Columbia",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"Conservative",
+            title: "some title"
+        }
     },
     {
-        title: "Conservative party event 1",
-        id: 1,
-        location: "online",
-        province: "British Columbia",
-        party: "Conservative",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
-
+        province:"British Columbia",
+        id:0,
+        Info:{
+            date:"some date",
+            link:" some link",
+            location: "some location",
+            party:"NDP",
+            title: "some title"
+        }
     },
-    {
-        title: "NDP event 1",
-        id: 2,
-        location: "online",
-        province: "British Columbia",
-        party: "NDP",
-        link: "sample link",
-        date: "sampel date",
-        description: "sample description",
-
-    }
-
+    
+    
 ];
 
 
@@ -182,7 +186,7 @@ export default class Main extends React.Component{
         }
         else if (this.state.selectedParty != 'All' && this.state.selectedProvince == 'All')
         {
-            this.filteredEvents = testEventArray.filter(testEvent => testEvent.party.includes(this.state.selectedParty));
+            this.filteredEvents = testEventArray.filter(testEvent => testEvent.Info.party.includes(this.state.selectedParty));
         }
         else if (this.state.selectedProvince != 'All' && this.state.selectedParty == 'All')
         {
@@ -190,7 +194,7 @@ export default class Main extends React.Component{
         }
         else
         {
-            this.filteredEvents = testEventArray.filter(testEvent => testEvent.province.includes(this.state.selectedProvince) && testEvent.party.includes(this.state.selectedParty));
+            this.filteredEvents = testEventArray.filter(testEvent => testEvent.province.includes(this.state.selectedProvince) && testEvent.Info.party.includes(this.state.selectedParty));
         }
         
         return(
