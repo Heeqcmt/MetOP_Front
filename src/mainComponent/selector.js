@@ -5,18 +5,6 @@ import { Container,Row,Col } from 'react-bootstrap'
 
 
 
-const provinceArray = [
-    "Ontario",
-    "British Columbia"
-];
-
-const partyArray = [
-    "Liberal",
-    "Conservative",
-    "NDP"
-];
-
-
 export default class Selector extends React.Component
 {
     render()
@@ -28,9 +16,9 @@ export default class Selector extends React.Component
                     <Form>
                         <Form.Group controlId="provinceSelect">
                             <Form.Label> Provinces</Form.Label>
-                            <Form.Control as='select'>
-                                {provinceArray.map(province => (
-                                    <option>{province}</option>
+                            <Form.Control as='select' onChange={this.props.onProvinceChange}>
+                                {this.props.provinceArray.map(province => (
+                                    <option value={province}>{province}</option>
                                 ))}
                             </Form.Control>
                         </Form.Group>
@@ -40,9 +28,9 @@ export default class Selector extends React.Component
                <Form>
                         <Form.Group controlId="partySelect">
                             <Form.Label> Party</Form.Label>
-                            <Form.Control as='select'>
-                                {partyArray.map(party => (
-                                    <option>{party}</option>
+                            <Form.Control as='select' onChange={this.props.onPartyChange}>
+                                {this.props.partyArray.map(party => (
+                                    <option value={party}>{party}</option>
                                 ))}
                             </Form.Control>
                         </Form.Group>
