@@ -2,141 +2,141 @@ import React from "react";
 import Selector from "./mainComponent/selector";
 import EventBoard from "./mainComponent/eventBoard";
 //sample data
-const testEventArray = [
-    {
-        province:"Ontario",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"Liberal",
-            title: "some title"
-        }
-    },
-    {
-        province:"Ontario",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"Conservative",
-            title: "some title"
-        }
-    },
-    {
-        province:"Ontario",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"NDP",
-            title: "some title"
-        }
-    },{
-        province:"Ontario",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"Liberal",
-            title: "some title"
-        }
-    },
-    {
-        province:"Ontario",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"Conservative",
-            title: "some title"
-        }
-    },
-    {
-        province:"Ontario",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"NDP",
-            title: "some title"
-        }
-    },
-    {
-        province:"Ontario",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"Liberal",
-            title: "some title"
-        }
-    },
-    {
-        province:"Ontario",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"Conservative",
-            title: "some title"
-        }
-    },
-    {
-        province:"Ontario",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"NDP",
-            title: "some title"
-        }
-    },
-    {
-        province:"British Columbia",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"Liberal",
-            title: "some title"
-        }
-    },
-    {
-        province:"British Columbia",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"Conservative",
-            title: "some title"
-        }
-    },
-    {
-        province:"British Columbia",
-        id:0,
-        Info:{
-            date:"some date",
-            link:" some link",
-            location: "some location",
-            party:"NDP",
-            title: "some title"
-        }
-    },
+// const testEventArray = [
+//     {
+//         province:"Ontario",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"Liberal",
+//             title: "some title"
+//         }
+//     },
+//     {
+//         province:"Ontario",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"Conservative",
+//             title: "some title"
+//         }
+//     },
+//     {
+//         province:"Ontario",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"NDP",
+//             title: "some title"
+//         }
+//     },{
+//         province:"Ontario",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"Liberal",
+//             title: "some title"
+//         }
+//     },
+//     {
+//         province:"Ontario",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"Conservative",
+//             title: "some title"
+//         }
+//     },
+//     {
+//         province:"Ontario",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"NDP",
+//             title: "some title"
+//         }
+//     },
+//     {
+//         province:"Ontario",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"Liberal",
+//             title: "some title"
+//         }
+//     },
+//     {
+//         province:"Ontario",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"Conservative",
+//             title: "some title"
+//         }
+//     },
+//     {
+//         province:"Ontario",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"NDP",
+//             title: "some title"
+//         }
+//     },
+//     {
+//         province:"British Columbia",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"Liberal",
+//             title: "some title"
+//         }
+//     },
+//     {
+//         province:"British Columbia",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"Conservative",
+//             title: "some title"
+//         }
+//     },
+//     {
+//         province:"British Columbia",
+//         id:0,
+//         Info:{
+//             date:"some date",
+//             link:" some link",
+//             location: "some location",
+//             party:"NDP",
+//             title: "some title"
+//         }
+//     },
     
     
-];
+// ];
 
 
 const provinceArray = [
@@ -159,9 +159,11 @@ export default class Main extends React.Component{
         super(props);
         this.state = {
             selectedParty: 'All',
-            selectedProvince: 'All'
+            selectedProvince: 'All',
+            loading: true,
+            testEventArray: null
         };
-        this.filteredEvents = testEventArray
+        this.filteredEvents = null;
         this.handlePartyChange = this.handlePartyChange.bind(this);
         this.handleProvinceChange = this.handleProvinceChange.bind(this);
     }
@@ -175,35 +177,60 @@ export default class Main extends React.Component{
         this.setState({selectedProvince: e.target.value});
     
     }
+
+    async componentDidMount()
+    {
+        const url = "https://hy2olkyzs9.execute-api.us-east-1.amazonaws.com/default";
+        const response = await fetch(url);
+        const data = await response.json();
+        this.setState({testEventArray: data});
+        this.filteredEvents = this.state.testEventArray;
+        this.setState({loading:false})
+        
+        
+    }
     
     
     render()
     {
 
 
-        if(this.state.selectedParty == 'All' && this.state.selectedProvince == 'All'){
-            this.filteredEvents = testEventArray;
-        }
-        else if (this.state.selectedParty != 'All' && this.state.selectedProvince == 'All')
+        if(this.state.loading)
         {
-            this.filteredEvents = testEventArray.filter(testEvent => testEvent.Info.party.includes(this.state.selectedParty));
-        }
-        else if (this.state.selectedProvince != 'All' && this.state.selectedParty == 'All')
-        {
-            this.filteredEvents = testEventArray.filter(testEvent => testEvent.province.includes(this.state.selectedProvince));
+            return(
+             
+                <div>Loading events</div>
+                
+            )
         }
         else
         {
-            this.filteredEvents = testEventArray.filter(testEvent => testEvent.province.includes(this.state.selectedProvince) && testEvent.Info.party.includes(this.state.selectedParty));
+            if(this.state.selectedParty == 'All' && this.state.selectedProvince == 'All'){
+                this.filteredEvents = this.state.testEventArray;
+            }
+            else if (this.state.selectedParty != 'All' && this.state.selectedProvince == 'All')
+            {
+                this.filteredEvents = this.state.testEventArray.filter(testEvent => testEvent.Info.party.includes(this.state.selectedParty));
+            }
+            else if (this.state.selectedProvince != 'All' && this.state.selectedParty == 'All')
+            {
+                this.filteredEvents = this.state.testEventArray.filter(testEvent => testEvent.province.includes(this.state.selectedProvince));
+            }
+            else
+            {
+                this.filteredEvents = this.state.testEventArray.filter(testEvent => testEvent.province.includes(this.state.selectedProvince) && testEvent.Info.party.includes(this.state.selectedParty));
+            }
+            
+            return(
+                
+                <>
+                < Selector partyArray ={partyArray} provinceArray = {provinceArray}  {...this.props} onPartyChange = {this.handlePartyChange} onProvinceChange ={this.handleProvinceChange}/>
+                < EventBoard eventArray ={this.filteredEvents}/>
+                <h4>province seleceted : {this.state.selectedProvince} </h4>
+                <h4>party selected: {this.state.selectedParty}</h4>
+                </>
+              
+            );
         }
-        
-        return(
-            <>
-            < Selector partyArray ={partyArray} provinceArray = {provinceArray}  {...this.props} onPartyChange = {this.handlePartyChange} onProvinceChange ={this.handleProvinceChange}/>
-            < EventBoard eventArray ={this.filteredEvents}/>
-            <h4>province seleceted : {this.state.selectedProvince} </h4>
-            <h4>party selected: {this.state.selectedParty}</h4>
-            </>
-        );
     };
 };
