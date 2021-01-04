@@ -1,144 +1,6 @@
 import React from "react";
 import Selector from "./mainComponent/selector";
 import EventBoard from "./mainComponent/eventBoard";
-//sample data
-// const testEventArray = [
-//     {
-//         province:"Ontario",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"Liberal",
-//             title: "some title"
-//         }
-//     },
-//     {
-//         province:"Ontario",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"Conservative",
-//             title: "some title"
-//         }
-//     },
-//     {
-//         province:"Ontario",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"NDP",
-//             title: "some title"
-//         }
-//     },{
-//         province:"Ontario",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"Liberal",
-//             title: "some title"
-//         }
-//     },
-//     {
-//         province:"Ontario",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"Conservative",
-//             title: "some title"
-//         }
-//     },
-//     {
-//         province:"Ontario",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"NDP",
-//             title: "some title"
-//         }
-//     },
-//     {
-//         province:"Ontario",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"Liberal",
-//             title: "some title"
-//         }
-//     },
-//     {
-//         province:"Ontario",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"Conservative",
-//             title: "some title"
-//         }
-//     },
-//     {
-//         province:"Ontario",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"NDP",
-//             title: "some title"
-//         }
-//     },
-//     {
-//         province:"British Columbia",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"Liberal",
-//             title: "some title"
-//         }
-//     },
-//     {
-//         province:"British Columbia",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"Conservative",
-//             title: "some title"
-//         }
-//     },
-//     {
-//         province:"British Columbia",
-//         id:0,
-//         Info:{
-//             date:"some date",
-//             link:" some link",
-//             location: "some location",
-//             party:"NDP",
-//             title: "some title"
-//         }
-//     },
-    
-    
-// ];
-
-
 const provinceArray = [
     "All",
     "Ontario",
@@ -152,6 +14,12 @@ const partyArray = [
     "NDP"
 ];
 
+
+//main.js constains filter (selection.js) and the actual event board display(eventboard.js)
+//get the event array from opie_api
+//save into testEventArray and filteredEvents
+//filtered events are filter through feedback from selection.js 
+//testEventArray holds all the events scrapped from opie_db
 export default class Main extends React.Component{
 
     constructor(props)

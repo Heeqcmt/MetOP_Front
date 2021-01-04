@@ -3,7 +3,8 @@ import Form from 'react-bootstrap/Form'
 
 import { Container,Row,Col } from 'react-bootstrap'
 
-
+//allows the users to choose which events to display. The filters are parties and provinces
+//returns the selections via state
 
 export default class Selector extends React.Component
 {

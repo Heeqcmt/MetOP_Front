@@ -1,10 +1,9 @@
 import React from 'react';
-
 import Card from 'react-bootstrap/Card';
 import { Container,Row,Col } from 'react-bootstrap';
 
-
-
+//shows individual events in an event board
+//gets the array of the events from main.js
 
 export default class EventBoard extends React.Component {
     render() {
