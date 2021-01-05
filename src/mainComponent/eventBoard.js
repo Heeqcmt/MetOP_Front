@@ -1,4 +1,5 @@
 import React from 'react';
+import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
 import { Container,Row,Col } from 'react-bootstrap';
 
@@ -10,7 +11,7 @@ export default class EventBoard extends React.Component {
         return (
             
             
-                <Container>
+                <Container fluid>
                     <Row>
                        
                         {
@@ -18,8 +19,8 @@ export default class EventBoard extends React.Component {
                                 event => (
                                     <Col md="4" >
                                         <a style={{cursor:'pointer'}} onClick={()=>window.open(event.Info.link,"_blank")}>
-                                        <Card bg='light'> 
-                                            <Card.Header>{event.Info.title}</Card.Header>
+                                        <Card bg='light' style={{flex:2}}> 
+                                            <Card.Header bg='dark'>{event.Info.title}</Card.Header>
                                             <Card.Body >
                                                 <Card.Text>
                                                     <div>{event.Info.party}</div>
@@ -35,7 +36,7 @@ export default class EventBoard extends React.Component {
                                 )
                             )
                         }
-                        
+        
                     </Row>
                 </Container>
            

@@ -94,8 +94,8 @@ export default class Main extends React.Component{
                 <>
                 < Selector partyArray ={partyArray} provinceArray = {provinceArray}  {...this.props} onPartyChange = {this.handlePartyChange} onProvinceChange ={this.handleProvinceChange}/>
                 < EventBoard eventArray ={this.filteredEvents}/>
-                <h4>province seleceted : {this.state.selectedProvince} </h4>
-                <h4>party selected: {this.state.selectedParty}</h4>
+                {/* <h4>province seleceted : {this.state.selectedProvince} </h4>
+                <h4>party selected: {this.state.selectedParty}</h4> */}
                 </>
               
             );
