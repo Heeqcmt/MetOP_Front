@@ -13,17 +13,18 @@ export default function Footer() {
                         <h2>
                             Thank you for checking out my site
                         </h2>
-
-                        <pre>
-                            This is one of series of projects which aim to showcase my ability to learn and code.
-                            This site showcases the fullstack capability of me.
-                            Technologies used:
-                                                Frontend -- reactjs
-                                                Event Scrapping -- python and beautiful soup
-                                                Database -- python, boto3 and dynamodb
-                                                API -- api gateway, lambda and javascript
-                            All learnt on my own with help from documentations and google.
-                        </pre>
+                        <div>
+                       
+                            This is one of series of projects which aim to showcase my ability to learn and code.<br/>
+                            This site showcases the fullstack capability of me.<br/>
+                            Technologies used:<br/>
+                            &emsp;&emsp;&emsp;&emsp;Frontend -- reactjs<br/>
+                            &emsp;&emsp;&emsp;&emsp;Event Scrapping -- python and beautiful soup<br/>
+                            &emsp;&emsp;&emsp;&emsp;Database -- python, boto3 and dynamodb<br/>
+                            &emsp;&emsp;&emsp;&emsp;API -- api gateway, lambda and javascript<br/>
+                            All learnt on my own with help from documentations and google.<br/>
+                        
+                        </div>
 
                         <p>
                             <Button variant='primary' onClick={()=>window.open("https://github.com/Heeqcmt","_blank")}> Check out my github</Button>

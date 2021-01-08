@@ -15,9 +15,9 @@ export default function Header() {
                         <h1>
                         <img className="logo"src={logo} ></img> Meet the Ontario Parties
                         </h1>
-                        <pre>
+                        <p>
                                             One place for all the events posted by Ontario Parties.
-                        </pre>
+                        </p>
                     </Container>
 
                 </Jumbotron>
