@@ -7,16 +7,16 @@ import './index.css'
 export default function Header() {
     
         return (
-            <header>
-                <Jumbotron>
+            <header >
+                <Jumbotron className="jumbo">
                     <Container>
 
-                        
+                        <img className="logo"src={logo} ></img>
                         <h1>
-                        <img className="logo"src={logo} ></img> Meet the Ontario Parties
+                         Meet the Ontario Parties
                         </h1>
                         <p>
-                                            One place for all the events posted by Ontario Parties.
+                        One place for all the events posted by Ontario Parties.
                         </p>
                     </Container>
 

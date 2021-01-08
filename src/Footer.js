@@ -8,7 +8,7 @@ export default function Footer() {
     
         return (
             <footer>
-                <Jumbotron>
+                <Jumbotron className="jumbo">
                     <Container>
                         <h2>
                             Thank you for checking out my site
