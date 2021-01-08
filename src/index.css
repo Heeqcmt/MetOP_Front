@@ -6,3 +6,9 @@ pre {
     white-space: -o-pre-wrap;
     word-wrap: break-word;
  }
+
+ .logo
+ {
+     height: 100px;
+     width:100px;
+ }
